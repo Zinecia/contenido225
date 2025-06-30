@@ -29,6 +29,22 @@ flex-direction: column;
 <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
 </head>
 <body class="text-white font-sans">
+<!-- Advertencia -->
+<div id="advertencia" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-6">
+  <div class="bg-[#1a1a1a] border-2 border-yellow-500 rounded-lg p-6 max-w-2xl text-center text-white">
+    <h2 class="text-xl md:text-2xl font-bold text-yellow-400 mb-4">⚠️ Advertencia de Contenido</h2>
+    <p class="text-sm md:text-base leading-relaxed">
+      Este contenido podría contener escenas violentas y vocabulario inapropiado.<br><br>
+      Lo que se muestra no forma parte de nuestras políticas ni representa nuestras creencias o ideales.<br><br>
+      No estamos ligados de ninguna forma con las acciones o ideologías reflejadas en este contenido.<br><br>
+      Nuestro único objetivo es informar y mostrar al público las historias tal como ocurrieron.
+    </p>
+    <button onclick="cerrarAdvertencia()" class="mt-6 px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded transition-all">
+      Entendido
+    </button>
+  </div>
+</div>
+
 <div class="overlay min-h-screen">
 <div class="max-w-4xl mx-auto p-4 pb-24">
 
@@ -251,6 +267,10 @@ repartoSection.appendChild(downloadBtn);
 
 });
 
+ function cerrarAdvertencia() {
+    var advertencia = document.getElementById("advertencia");
+    advertencia.style.display = "none";
+  }
 </script>
 
 
